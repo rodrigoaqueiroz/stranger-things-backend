@@ -8,6 +8,7 @@ const StrangerThingsService = require('./services/StrangerThings');
 
 const PORT = process.env.PORT || 3000;
 const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE || true;
+// o app estava vinculado com os remotes invertido 
 
 const app = express();
 
