@@ -7,7 +7,7 @@ const StrangerThingsRepository = require('./data/repository/StrangerThings');
 const StrangerThingsService = require('./services/StrangerThings');
 
 const PORT = process.env.PORT || 3000;
-const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE || true;
+const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE || false;
 
 const app = express();
 
@@ -28,10 +28,6 @@ app.get('/', (req, res) => {
 
   res.status(200).json(characters);
 });
-
-// app.get('/', (_req, res) => {
-//   res.send('olá, estou funcionando!! sem PM2');
-// });
 
 app.listen(PORT, () => {
   console.log(`Escutando na porta ${PORT}`);
