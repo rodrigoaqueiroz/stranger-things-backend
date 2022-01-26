@@ -7,7 +7,7 @@ const StrangerThingsRepository = require('./data/repository/StrangerThings');
 const StrangerThingsService = require('./services/StrangerThings');
 
 const PORT = process.env.PORT || 3000;
-const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE || false;
+const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE || true;
 
 const app = express();
 
