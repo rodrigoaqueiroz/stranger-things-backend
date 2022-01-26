@@ -1,31 +1,36 @@
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config();
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
 const StrangerThingsRepository = require('./data/repository/StrangerThings');
 const StrangerThingsService = require('./services/StrangerThings');
 
 const PORT = process.env.PORT || 3000;
-const hereIsTheUpsideDown = true;
+const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE === 'true';
 
 const app = express();
 
 const strangerThingsRepository = new StrangerThingsRepository(
   strangerThingsDataset,
-);
-const strangerThingsService = new StrangerThingsService(
-  strangerThingsRepository,
-);
-
-app.use(cors());
-
-app.get('/', (req, res) => {
-  const characters = strangerThingsService.search(
-    req.query,
-    hereIsTheUpsideDown,
   );
+  const strangerThingsService = new StrangerThingsService(
+    strangerThingsRepository,
+    );
+    
+    app.use(cors());
+    
+// app.get('/', (req, res) => {
+//   const characters = strangerThingsService.search(
+//     req.query,
+//     hereIsTheUpsideDown,
+//   );
 
-  res.status(200).json(characters);
+//   res.status(200).json(characters);
+// });
+
+app.get('/', (_req, res) => {
+  res.send('olá, estou funcionando!! sem PM2');
 });
 
 app.listen(PORT, () => {
