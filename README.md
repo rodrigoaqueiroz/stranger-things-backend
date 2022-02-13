@@ -150,10 +150,6 @@ Todos esses passos estão detalhados nos requisitos abaixos.
 
 # Requisitos do projeto
 
-⚠️ Lembre-se que o seu projeto só será avaliado se estiver passando por **todos os _checks_** do **Linter**. Utilize o comando `npm run lint` no seu terminal para verificar os _checks_ do **Linter** 😉 ⚠️
-
-Os requisitos estão agrupados por `frontend` e `backend`. Realize as alterações nos respectivos diretórios [disponbilizados para você](#Deploy---Stranger-Things).
-
 ### Backend
 
 #### 1 - Verifica as variáveis de ambiente
