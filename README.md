@@ -1,6 +1,6 @@
 # Stranger Things Backend - Projeto de Deploy
 
-#### Esse é o repositório do backend do projeto, o front está [neste](https://github.com/rodrigoaqueiroz/stranger-things-frontend) repositório
+#### Esse é o repositório do backend do projeto, o front está [neste](https://github.com/rodrigoaqueiroz/stranger-things-frontend) repositório.
 
 --- 
 
